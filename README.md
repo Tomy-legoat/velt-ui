@@ -27,4 +27,4 @@ Exclus :
 - [Issue 01 - Creer Page et composants UI](issues/01-creer-page-composants-ui.md)
 - [Issue 02 - Implementer WebRenderer HTML](issues/02-implementer-web-renderer-html.md)
 - [Issue 03 - Implementer JsonRenderer preview](issues/03-implementer-json-renderer-preview.md)
-
+- [Issue 04 - Ajouter ViewFactory et chargement des pages Velt](issues/04-ajouter-viewfactory-chargement-pages-velt.md)
