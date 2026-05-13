@@ -50,3 +50,50 @@ L'integration avec `veltphp/http` est testee plus tard par le sous-module 07. UI
 - [Issue 04 - Ajouter ViewFactory et chargement des pages Velt](issues/04-ajouter-viewfactory-chargement-pages-velt.md)
 - [Issue 05 - Definir contrats Component Renderer View](issues/05-definir-contrats-component-renderer-view.md)
 - [Issue 06 - Cadrer cache compilation et schema UI](issues/06-cadrer-cache-compilation-schema-ui.md)
+
+## Exemple officiel (Issue 01)
+
+```php
+use Veltphp\Ui\Page;
+use Veltphp\Ui\Components\Card;
+use Veltphp\Ui\Components\Text;
+use Veltphp\Ui\Components\Button;
+use Veltphp\Ui\Components\Form;
+use Veltphp\Ui\Components\Input;
+
+$page = Page::make('Connexion')
+    ->layout('auth')
+    ->meta(['title' => 'Connexion - Velt App'])
+    ->add(
+        Card::make()->class('p-8')->add(
+            Text::make('Connexion')->as('h1')
+        )->add(
+            Form::make()
+                ->method('POST')
+                ->action('/login')
+                ->csrf()
+                ->add(
+                    Input::make('email', 'Email')
+                        ->type('email')
+                        ->required()
+                        ->placeholder('Entrez votre email')
+                )->add(
+                    Input::make('password', 'Mot de passe')
+                        ->type('password')
+                        ->required()
+                        ->placeholder('Entrez votre mot de passe')
+                )->add(
+                    Button::make('Se connecter')
+                        ->type('submit')
+                        ->variant('primary')
+                        ->class('w-full')
+                )
+        )
+    );
+
+// Sérialiser en tableau
+$data = $page->toArray();
+
+// Sérialiser en JSON
+$json = $page->toJson();
+```
