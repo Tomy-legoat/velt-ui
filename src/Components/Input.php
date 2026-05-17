@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Veltphp\Ui\Components;
+namespace Velt\Ui\Components;
 
 /**
  * Class Input

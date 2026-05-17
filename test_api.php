@@ -4,10 +4,10 @@ declare(strict_types=1);
 
 require_once 'vendor/autoload.php';
 
-use Veltphp\Ui\Page;
-use Veltphp\Ui\Components\Card;
-use Veltphp\Ui\Components\Text;
-use Veltphp\Ui\Components\Button;
+use Velt\Ui\Page;
+use Velt\Ui\Components\Card;
+use Velt\Ui\Components\Text;
+use Velt\Ui\Components\Button;
 
 // Test de l'API cible exacte de l'Issue 01
 $page = Page::make('Connexion')
