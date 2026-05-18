@@ -2,7 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Veltphp\Ui\Components;
+namespace Velt\Ui\Components;
+
+use Velt\Ui\Contracts\ComponentInterface;
 
 /**
  * Class Component
@@ -26,7 +28,7 @@ namespace Veltphp\Ui\Components;
  *     ->class('p-8')
  *     ->add(Text::make('Bonjour'));
  */
-abstract class Component
+abstract class Component implements ComponentInterface
 {
     /**
      * Type du composant.
@@ -93,6 +95,16 @@ abstract class Component
     public function class(string $class): static
     {
         return $this->prop('class', $class);
+    }
+
+    /**
+     * Conserve une condition logique pour les renderers qui la comprennent.
+     *
+     * Le renderer preview la serialise sans l'evaluer dans le Module 1.
+     */
+    public function showIf(mixed $condition): static
+    {
+        return $this->prop('showIf', $condition);
     }
 
     /**

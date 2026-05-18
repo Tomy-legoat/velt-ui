@@ -2,17 +2,17 @@
 
 declare(strict_types=1);
 
-namespace Veltphp\Ui\Tests;
+namespace Velt\Ui\Tests;
 
 use PHPUnit\Framework\TestCase;
-use Veltphp\Ui\Components\Alert;
-use Veltphp\Ui\Components\Button;
-use Veltphp\Ui\Components\Card;
-use Veltphp\Ui\Components\Form;
-use Veltphp\Ui\Components\Input;
-use Veltphp\Ui\Components\Link;
-use Veltphp\Ui\Components\Text;
-use Veltphp\Ui\Page;
+use Velt\Ui\Components\Alert;
+use Velt\Ui\Components\Button;
+use Velt\Ui\Components\Card;
+use Velt\Ui\Components\Form;
+use Velt\Ui\Components\Input;
+use Velt\Ui\Components\Link;
+use Velt\Ui\Components\Text;
+use Velt\Ui\Page;
 
 /**
  * Class PageAndComponentsTest
@@ -322,8 +322,9 @@ class PageAndComponentsTest extends TestCase
         $decoded = json_decode($json, true);
 
         $this->assertIsArray($decoded);
-        $this->assertSame('page', $decoded['type']);
-        $this->assertSame('Test', $decoded['title']);
+        $this->assertSame(1, $decoded['schemaVersion']);
+        $this->assertSame('Test', $decoded['screen']);
+        $this->assertSame('Text', $decoded['components'][0]['type']);
     }
 
     /**

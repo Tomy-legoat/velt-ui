@@ -1,5 +1,5 @@
 {
-    "name": "veltphp/ui",
+    "name": "velt/ui",
     "description": "Declarative UI components and renderers for the Velt framework.",
     "type": "library",
     "license": "MIT",
@@ -14,7 +14,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Veltphp\\Ui\\": "src/"
+            "Velt\\Ui\\": "src/"
         }
     },
     "minimum-stability": "dev",

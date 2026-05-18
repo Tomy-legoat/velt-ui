@@ -2,9 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Veltphp\Ui;
+namespace Velt\Ui;
 
-use JsonException;
+use Velt\Ui\Contracts\ViewInterface;
+use Velt\Ui\Renderers\JsonRenderer;
 
 /**
  * Class Page
@@ -30,7 +31,7 @@ use JsonException;
  *         Card::make()
  *     );
  */
-class Page
+class Page implements ViewInterface
 {
     /**
      * Titre principal de la page.
@@ -201,11 +202,6 @@ class Page
      */
     public function toJson(): string
     {
-        return json_encode(
-            $this->toArray(),
-            JSON_PRETTY_PRINT
-            | JSON_UNESCAPED_UNICODE
-            | JSON_THROW_ON_ERROR
-        );
+        return (new JsonRenderer())->render($this);
     }
 }

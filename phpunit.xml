@@ -5,7 +5,7 @@
          colors="true"
          verbose="true">
     <testsuites>
-        <testsuite name="Veltphp UI Tests">
+        <testsuite name="Velt UI Tests">
             <directory>tests</directory>
         </testsuite>
     </testsuites>
