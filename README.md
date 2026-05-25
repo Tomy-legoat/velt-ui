@@ -4,6 +4,10 @@ Documentation complete : [docs/README.md](docs/README.md)
 
 Integration kernel : [docs/KERNEL_INTEGRATION.md](docs/KERNEL_INTEGRATION.md)
 
+Connexion locale faite avec le kernel : [docs/KERNEL_CONNECTION_DONE.md](docs/KERNEL_CONNECTION_DONE.md)
+
+Issue a creer cote kernel : [docs/ISSUE_KERNEL_UI_CONNECTION.md](docs/ISSUE_KERNEL_UI_CONNECTION.md)
+
 Guide de contribution : [CONTRIBUTING.md](CONTRIBUTING.md)
 
 Politique de securite : [SECURITY.md](SECURITY.md)
